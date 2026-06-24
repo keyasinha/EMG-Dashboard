@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100;
+    font-family: "JetBrains Mono", "Menlo", monospace;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .label-caps {
+    @apply text-[10px] tracking-[0.08em] uppercase text-zinc-400 dark:text-zinc-500;
+  }
+  .ruled {
+    @apply border border-zinc-200 dark:border-zinc-800 rounded-md;
+  }
+}

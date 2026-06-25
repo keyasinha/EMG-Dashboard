@@ -28,25 +28,19 @@ class EMGResponse(BaseModel):
 
 
 # ── ML feature stubs ─────────────────────────────────────────────────────────
-# These models are placeholders for planned features.
-# Populate them when implementing fatigue detection, gesture recognition,
-# and tremor analysis modules.
 
 class FatigueAnalysis(BaseModel):
-    """Placeholder: muscle fatigue index derived from RMS trend."""
     fatigue_index: Optional[float] = None
     onset_detected: bool = False
     confidence: Optional[float] = None
 
 
 class GestureLabel(BaseModel):
-    """Placeholder: gesture class predicted from EMG pattern."""
     label: Optional[str] = None
     confidence: Optional[float] = None
 
 
 class TremorAnalysis(BaseModel):
-    """Placeholder: tremor frequency and amplitude metrics."""
     frequency_hz: Optional[float] = None
     amplitude: Optional[float] = None
     tremor_detected: bool = False

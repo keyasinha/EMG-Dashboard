@@ -16,7 +16,7 @@ Real-time electromyography monitoring interface backed by ThingSpeak, built for 
 
 ```bash
 cd backend
-cp .env.example .env          # credentials already set for IISER channel
+cp .env.example .env          
 pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```

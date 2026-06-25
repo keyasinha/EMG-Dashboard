@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: emg-api
+    runtime: python
+    pythonVersion: "3.11"
+    rootDir: backend
+    buildCommand: pip install --upgrade pip && pip install --only-binary=:all: -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: THINGSPEAK_CHANNEL_ID
+        value: 3414979
+      - key: THINGSPEAK_READ_API_KEY
+        value: 54V9WM6UNJQH0EBF
+      - key: ALLOWED_ORIGINS
+        value: '["https://your-app.vercel.app"]'
+      - key: PYTHON_VERSION
+        value: "3.11.9"
